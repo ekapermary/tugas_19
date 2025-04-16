@@ -26,6 +26,10 @@ public class ProductPage {
 
     // Checks if product is added (i.e., "Remove" button is visible)
     public boolean isProductInCart() {
-        return webDriver.findElement(removeButtonForFirstProduct).isDisplayed();
+        try {
+            return webDriver.findElement(removeButtonForFirstProduct).isDisplayed();
+        } catch (Exception e) {
+            return false; // If not found, product is not in cart
+        }
     }
 }

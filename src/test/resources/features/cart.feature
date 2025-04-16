@@ -1,6 +1,12 @@
 @cart
 Feature: Product page cart
 
+  Background:
+    Given user on the home page
+    When user input "standard_user" as username
+    And user input "secret_sauce" as password
+    Then user will redirect to home page
+
   @valid-Add
   Scenario: Add a product to the cart
     Given the user is on the product page
