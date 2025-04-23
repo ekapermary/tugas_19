@@ -27,6 +27,7 @@ public class Utility {
         options.addArguments("--disable-save-password-bubble");
         options.addArguments("--disable-notifications");
         options.addArguments("--incognito"); // Optional: start in incognito
+        options.addArguments("--headless");
 
         webDriver = new ChromeDriver(options);
         webDriver.manage().window().fullscreen();
